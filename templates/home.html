@@ -1,0 +1,171 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+
+
+{% block content %}
+<!--- Image Slider -->
+ <div  class="carousel slide" id="slides" data-ride="carousel">
+ 	<ul class="carousel-indicators">
+		<li data-target="#slides" data-slide-t0="0" class="active"></li>
+		<li data-target="#slides" data-slide-t0="1"></li>
+		<li data-target="#slides" data-slide-t0="2"></li>
+ 	</ul>
+ 	<div class="carousel-inner">
+ 		<div class="carousel-item active">
+ 			<img src="{% static "media/background.png"%}">
+ 			<div class="carousel-caption">
+ 				<h1 class="display-2">JECRC hills</h1>
+ 				<h3>Sitapura, Jaipur</h3>
+                <a href="{% url "posts" %}"><button type="button" class="btn btn-outline-light btn-lg"> VIEW BLOG </button></a>
+                <a href="{% url "account_signup" %}"><button type="button" class="btn btn-primary btn-lg"> GET STARTED</button></a>
+ 			</div>
+ 		</div>
+ 		<div class="carousel-item">
+ 			<img src="{% static "media/background2.jpg"%}">
+ 		</div>
+ 		<div class="carousel-item">
+ 			<img src="{% static "media/background3.jpg"%}">
+ 		</div>
+ 	</div>
+	 <a class="carousel-control-prev" href="#slides" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#slides" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+ </div>
+
+<!--- Jumbotron -->
+<div class="container-fluid">
+	<div class="row jumbotron">
+		<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
+			<p class="lead"> A web hosting service allows  individuals and organizations to make their website accessible by World wide web.Order a full functioning website right now in the minimum charges.</p>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2">
+			 <a href="{% url "account_login" %}"><button type="button" class="btn btn-outline-secondary btn-lg">Log In</button></a>
+		</div>
+	</div>
+
+</div>
+
+<!--- Welcome Section -->
+<div class="container-fluid padding">
+	<div class="row welcome text-center">
+		<div class="col-12">
+			<h1 class="display-4"> Built with ease. Use These.</h1>
+		</div>
+		<hr>
+		<div class="col-12">
+			<p class="lead">In the 18 years of educational journey the JECRC Foundation has set up some of the best engineering colleges and nurtured the essence of growth in education. The JECRC Engineering College was the first venture of the foundation in the league of the best colleges for B.Tech in Rajasthan.<br> We have used following technologies to create our website. </p>
+		</div>
+	</div>
+</div>
+
+<!--- Three Column Section -->
+<div class="container-fluid padding">
+	<div class="row text-center padding">
+		<div class="col-xs-12 col-sm-6 col-md-4">
+			<i class="fas fa-code"></i>
+			<H3> HTML5 </H3>
+			<p> Build with the latest version of HTML, HTML5</p>
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-4">
+			<i class="fab fa-css3"></i>
+			<H3> CSS3 </H3>
+			<p> Build with the latest version of CSS, CSS3</p>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-4">
+			<i class="fas fa-bold"></i>
+			<H3> Bootstrap4 </H3>
+			<p> Build with the latest version of Bootstrap, Bootstrap4</p>
+		</div>
+	</div>
+<hr class="my-4">
+</div>
+
+
+<!--- Two Column Section -->
+<div class="container-fluid padding">
+	<div class="row padding">
+		<div class="col-lg-6">
+			<h2> To a Better Future...</h2>
+			<p>Importance of education tells us the value of education in our life. Education means a lot in everyone’s life as it facilitates our learning, knowledge and skill. It completely changes our mind and personality and helps us to attain the positive attitudes. We must give importance to the education than other targets in life as it is the only source of real happiness in our life.</p>
+			<p>Resize the browser window to see the effects. Responsive web design has more important.Resize the browser window to see the effects. Responsive web design has more important.Resize the browser window to see the effects. Responsive web design has more important.</p>
+			<p> It can also display web page differently depending on the screen size or viewing mode.It can also display web page differently depending on the screen size or viewing mode.It can also display web page differently depending on the screen size or viewing mode.</p>
+		<br>
+		<a href="{% url "account_login" %}" class="btn btn-primary">Learn More</a>
+		</div>
+		<div class="col-lg-6">
+			<img src="{% static "media/desk.png" %}" class="img-fluid">
+		</div>
+	</div>
+</div>
+<hr class="my-4">
+<!--- Fixed background -->
+<figure>
+	<div class="fixed-wrap">
+		<div id="fixed">
+
+		</div>
+	</div>
+</figure>
+<!--- Emoji Section -->
+<button class="fun" data-toggle="collapse" data-target="#emoji"> Click Me!</button>
+ <div id="emoji" class="collapse">
+ 	<div class="container-fluid padding">
+		<div class="row text-center">
+			<div class="col-sm-6 col-md-3" >
+				<img src="{% static "media/gif/panda.gif"%}" class="gif">
+			</div>
+			<div class="col-sm-6 col-md-3">
+				<img src="{% static "media/gif/poo.gif" %}" class="gif">
+			</div>
+			<div class="col-sm-6 col-md-3">
+				<img src="{% static "media/gif/chicken.gif" %}" class="gif">
+			</div>
+			<div class="col-sm-6 col-md-3">
+				<img src="{% static "media/gif/unicorn.gif" %}" class="gif">
+			</div>
+		</div>
+ 	</div>
+ </div>
+
+
+
+<!--- Two Column Section -->
+<div class="container-fluid padding">
+	<div class="row padding">
+		<div class="col-lg-6">
+			<h2> Our Philosophy</h2>
+			<p>We believe in partnering with you to create an integrated marketing effort.  You’ll get the benefits of a team that listens.  A team that is creative and experienced.  And a team that uses the latest web technology tools to ensure your site performs.</p>
+			<p>We focus on our people and spend the time investing in them so they can drive the business forward. We want our businesses to learn from each other and share best practices. We give our leaders the tools to succeed, allowing them to develop and grow in their roles.</p>
+		<br>
+		</div>
+		<div class="col-lg-6">
+			<img src="{% static "media/bootstrap2.jpg" %}" class="img-fluid">
+		</div>
+	</div>
+<hr class="my-4">
+</div>
+<!--- Connect -->
+
+<div class="container-fluid padding">
+	<div class="row text-center padding">
+		<div class="col-12">
+			<h2>Connect with us!</h2>
+		</div>
+		<div class="col-12 social padding">
+			<a href="https://www.facebook.com/k4kratik" target="_blank"><i class="fab fa-facebook"></i></a>
+			<a href="https://www.twitter.com/k4kratik" target="_blank"><i class="fab fa-twitter"></i></a>
+			<a href="https://www.instagram.com/k4kratik" target="_blank"><i class="fab fa-instagram"></i></a>
+			<a href="https://www.youtube.com/user/jecrcfoundation/videos" target="_blank"><i class="fab fa-youtube"></i></a>
+			<a href="mailto:kratik1998@gmail.com" target="_blank"><i class="fab fa-google-plus-g"></i></a>
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}

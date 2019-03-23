@@ -1,0 +1,47 @@
+{% load staticfiles %}
+
+<!-- Navigation -->
+
+
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+	<div class="container-fluid">
+		<a href="{% url 'home' %}" class="navbar-brand"><img id="jecrclogotop" onmouseover="this.src='{% static "media/animated_logo.gif" %}'" onmouseout="this.src='{% static "media/logo.jpg" %}'" src="{% static "media/logo.jpg" %}"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+                {% url 'home' as home %}
+                {% url 'about' as about %}
+                {% url 'team' as team %}
+                {% url 'contact' as contact %}
+                {% url 'connect' as connect %}
+				<li {% if request.path == home %} class="nav-item active" {% endif %}>
+					<a class="nav-link" href="{% url 'home' %}">Home</a>
+				</li>
+				<li {% if request.path == about %} class="nav-item active" {% endif %}>
+					<a class="nav-link" href="{% url 'about'%}">About Us</a>
+				</li>
+				<li {% if request.path == team %} class="nav-item active" {% endif %}>
+					<a class="nav-link" href="{% url 'team'%}">Team</a>
+				</li>
+                <li {% if request.path == contact %} class="nav-item active" {% endif %}>
+					<a class="nav-link" href="{% url 'contact'%}">Contact Us</a>
+				</li>
+                {#				<li {% if request.path == connect %} class="nav-item active dropdown btn-group" {% endif %}>#}
+                <li class="nav-item dropdown btn-group">
+					<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Account</a>
+                        <div class="dropdown-menu">
+                            {% if not request.user.is_authenticated %}
+                            <a class="dropdown-item" href="{% url 'account_login'%}">Log In</a>
+                            <a class="dropdown-item" href="{% url 'account_signup'%}">Sign Up</a>
+                            {% else %}
+                            <a class="dropdown-item" href="{% url 'account_logout'%}">Logout</a>
+                            {% endif %}
+                        </div>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+</nav>

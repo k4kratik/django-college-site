@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<!--- Meet the team -->
+<div class="container-fluid padding">
+	<div class="row welcome text-center">
+		<div class="col-12">
+			<h1 class="display-4">Meet The Team </h1>
+		</div>
+		<hr>
+	</div>
+
+</div>
+
+<!--- Cards -->
+<div class="container-fluid padding">
+	<div class="row padding">
+		<div class="col-md-4">
+			<div class="card">
+				<img src="{% static "media/team1.png" %}" class="card-img-top">
+				<div class="card-body">
+					<h4 class="card-title">KRATIK JAIN</h4>
+					<p class="card-text"> KRATIK is a internet entrepreneur with almost 1 years of experience.</p>
+					<a href="https://www.facebook.com/k4kratik" class="btn btn-outline-secondary" target="_blank">See Profile</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="card">
+				<img src="{% static "media/team2.png" %}" class="card-img-top">
+				<div class="card-body">
+					<h4 class="card-title">Shirley Jain</h4>
+					<p class="card-text"> OMG shirley is a graphic designer and she is working in the industry since 2009.</p>
+					<a href="https://www.facebook.com/shirleysetia/" class="btn btn-outline-secondary" target="_blank">See Profile</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="card">
+                <img src="{% static "media/team3.jpg" %}" class="card-img-top">
+                <div class="card-body">
+					<h4 class="card-title">Jack Peralta</h4>
+					<p class="card-text"> This is Jack Peralta, Our Chief PR Officer. He handles all the legal issues of the company.</p>
+					<a href="https://www.facebook.com/thelonelyisland/" class="btn btn-outline-secondary" target="_blank">See Profile</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</div>
+{% endblock %}

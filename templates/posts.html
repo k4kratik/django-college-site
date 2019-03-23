@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+<div class="offset-sm-2 col-sm-8">
+
+{% for post in posts %}
+    <div>
+    <p> published: {{ post.published_date }}</p>
+    <h1><a href="">{{ post.title }}</a></h1>
+    <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
+
+</div>
+
+{% endblock %}
